@@ -2,5 +2,8 @@
 
 
 @use '../appStyles';
-@use '../components/Header/headerStyles';
-@use '../components/Main/mainStyles';
+
+@import '../components/Header/styles.scss';
+@import '../components/Main/styles.scss';
+@import '../components/Display/styles.scss';
+@import '../components/Keypad/styles.scss';

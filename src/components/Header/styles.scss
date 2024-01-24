@@ -10,14 +10,13 @@
     }
 
     .theme-selector {
-
+        height: 50px;
         display: flex;
         justify-content: space-between;
-        align-items: end;
         gap: 15px;
 
         span {
-
+            margin-top: 30px;
             font-size: 15px;
             letter-spacing: 3px;
         }
@@ -31,6 +30,7 @@
             height: 100%;
 
             span {
+                margin-top: 0;
                 font-size: initial;
                 cursor: pointer;
             }
@@ -64,7 +64,7 @@
                 position: absolute;
                 width: 22px;
                 height: 22px;
-                background-color: aqua;
+                background-color: var(--red);
                 left: 4px;
                 bottom: 4px;
                 border-radius: 100%;
