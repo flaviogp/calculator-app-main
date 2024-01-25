@@ -1,6 +1,16 @@
 .app {
-    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 700px;
     height: 100vh;
     background-color: var(--very-dark-desaturated-blue-bg);
     padding: 30px;
+    margin: auto;
+
+    @media (min-width: 640px) {
+        max-height: 90vh;
+        margin: 20px auto;
+    }
 }
