@@ -1,0 +1,178 @@
+@mixin theme ($theme: ThemeOne) {
+    @if ($theme ==ThemeOne) {
+        background-color: $very-dark-desaturated-blue-bg;
+
+        .header {
+            color: $white;
+
+            .theme-selector {
+                .select-box {
+                    .toggle-theme {
+                        background-color: $very-dark-desaturated-blue-toggle;
+
+                        &::after {
+                            background-color: $red;
+                        }
+                    }
+                }
+            }
+        }
+
+        label[for=display] {
+            input[type=text] {
+                background-color: $very-dark-desaturated-blue-screen;
+                color: $white;
+            }
+        }
+
+
+        .keypad {
+            background-color: $very-dark-desaturated-blue-toggle;
+
+            .row {
+                div {
+                    color: $very-dark-grayish-blue;
+                    background-color: $light-grayish-orange;
+                    box-shadow: 0 3px 0 $grayish-orange;
+
+                    &#reset,
+                    &#del,
+                    &#equal {
+                        color: $light-grayish-orange;
+                    }
+
+                    &#reset,
+                    &#del {
+                        background-color: $desaturated-dark-blue-bg;
+                        box-shadow: 0 3px 0 $desaturated-dark-blue-shadow;
+                    }
+
+                    &#equal {
+                        background-color: $red;
+                        box-shadow: 0 3px 0 $dark-red;
+                    }
+
+                }
+            }
+        }
+    }
+
+    @else if(ThemeTwo) {
+        background-color: $light-gray;
+
+        .header {
+            color: $very-dark-grayish-yellow;
+
+            .theme-selector {
+                .select-box {
+                    .toggle-theme {
+                        background-color: $very-dark-desaturated-blue-toggle;
+
+                        &::after {
+                            background-color: $orange;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        label[for=display] {
+            input[type=text] {
+                background-color: $very-light-gray;
+                color: $very-dark-grayish-yellow;
+            }
+        }
+
+
+        .keypad {
+            background-color: $grayish-red;
+
+            .row {
+                div {
+                    color: $very-dark-grayish-yellow;
+                    background-color: $light-grayish-yellow;
+                    box-shadow: 0 3px 0 $dark-grayish-orange;
+
+                    &#reset,
+                    &#del,
+                    &#equal {
+                        color: $very-light-gray;
+                    }
+
+                    &#reset,
+                    &#del {
+                        background-color: $dark-moderate-cyan;
+                        box-shadow: 0 3px 0 $very-dark-cyan;
+                    }
+
+                    &#equal {
+                        background-color: $orange;
+                        box-shadow: 0 3px 0 $dark-orange;
+                    }
+
+                }
+            }
+        }
+
+    }
+
+    @else if(ThemeThree) {
+        background-color: $very-dark-violet-bg;
+
+        .header {
+            color: $very-dark-grayish-yellow;
+
+            .theme-selector {
+                .select-box {
+                    .toggle-theme {
+                        background-color: $very-dark-desaturated-blue-toggle;
+
+                        &::after {
+                            background-color: $orange;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        label[for=display] {
+            input[type=text] {
+                background-color: $very-light-gray;
+                color: $very-dark-grayish-yellow;
+            }
+        }
+
+
+        .keypad {
+            background-color: $grayish-red;
+
+            .row {
+                div {
+                    color: $very-dark-grayish-yellow;
+                    background-color: $light-grayish-yellow;
+                    box-shadow: 0 3px 0 $dark-grayish-orange;
+
+                    &#reset,
+                    &#del,
+                    &#equal {
+                        color: $very-light-gray;
+                    }
+
+                    &#reset,
+                    &#del {
+                        background-color: $dark-moderate-cyan;
+                        box-shadow: 0 3px 0 $very-dark-cyan;
+                    }
+
+                    &#equal {
+                        background-color: $orange;
+                        box-shadow: 0 3px 0 $dark-orange;
+                    }
+
+                }
+            }
+        }
+    }
+}

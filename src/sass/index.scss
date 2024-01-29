@@ -1,7 +1,8 @@
-@use 'main.scss';
+@import 'variables.scss';
+@import 'main.scss';
 
 
-@use '../appStyles';
+@import '../appStyles';
 
 @import '../components/Header/styles.scss';
 @import '../components/Main/styles.scss';

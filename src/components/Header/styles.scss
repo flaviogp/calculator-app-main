@@ -4,7 +4,6 @@
     align-items: center;
     width: 100%;
     height: 10%;
-    color: var(--white);
 
     h1 {
         font-size: 32px;
@@ -51,21 +50,22 @@
                 position: absolute;
                 width: 100%;
                 height: 30px;
-                background-color: var(--very-dark-desaturated-blue-toggle);
                 bottom: 0;
                 left: 0;
                 border-radius: 25px;
                 cursor: pointer;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 22px;
+                    height: 22px;
+                }
             }
         }
 
         .toggle-theme-1 {
             &::after {
-                content: '';
-                position: absolute;
-                width: 22px;
-                height: 22px;
-                background-color: var(--red);
                 left: 4px;
                 bottom: 4px;
                 border-radius: 100%;
@@ -74,11 +74,6 @@
 
         .toggle-theme-2 {
             &::after {
-                content: '';
-                position: absolute;
-                width: 22px;
-                height: 22px;
-                background-color: aqua;
                 left: calc(50% - 11px);
                 bottom: 4px;
                 border-radius: 100%;
@@ -87,11 +82,6 @@
 
         .toggle-theme-3 {
             &::after {
-                content: '';
-                position: absolute;
-                width: 22px;
-                height: 22px;
-                background-color: aqua;
                 right: 4px;
                 bottom: 4px;
                 border-radius: 100%;
