@@ -1,5 +1,3 @@
-import { useState } from "react"
-
 
 interface ThemeSelectorProps {
   setTheme: (arg: number) => void;
@@ -16,7 +14,7 @@ const ThemeSelector = ({setTheme, theme}: ThemeSelectorProps) => {
   const handleClick = () => {
     if(theme >= 3) return setTheme(1)
     const nextTheme = theme + 1
-  return setTheme(nextTheme)
+    return setTheme(nextTheme)
   }
 
   return (

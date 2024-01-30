@@ -57,7 +57,7 @@
         }
     }
 
-    @else if(ThemeTwo) {
+    @else if($theme ==ThemeTwo) {
         background-color: $light-gray;
 
         .header {
@@ -66,7 +66,7 @@
             .theme-selector {
                 .select-box {
                     .toggle-theme {
-                        background-color: $very-dark-desaturated-blue-toggle;
+                        background-color: $grayish-red;
 
                         &::after {
                             background-color: $orange;
@@ -117,19 +117,19 @@
 
     }
 
-    @else if(ThemeThree) {
+    @else if ($theme ==ThemeThree) {
         background-color: $very-dark-violet-bg;
 
         .header {
-            color: $very-dark-grayish-yellow;
+            color: $light-yellow;
 
             .theme-selector {
                 .select-box {
                     .toggle-theme {
-                        background-color: $very-dark-desaturated-blue-toggle;
+                        background-color: $very-dark-violet-toggle;
 
                         &::after {
-                            background-color: $orange;
+                            background-color: $pure-cyan;
                         }
                     }
 
@@ -139,20 +139,20 @@
 
         label[for=display] {
             input[type=text] {
-                background-color: $very-light-gray;
-                color: $very-dark-grayish-yellow;
+                background-color: $very-dark-violet-toggle;
+                color: $light-yellow;
             }
         }
 
 
         .keypad {
-            background-color: $grayish-red;
+            background-color: $very-dark-violet-toggle;
 
             .row {
                 div {
-                    color: $very-dark-grayish-yellow;
-                    background-color: $light-grayish-yellow;
-                    box-shadow: 0 3px 0 $dark-grayish-orange;
+                    color: $light-yellow;
+                    background-color: $very-dark-violet;
+                    box-shadow: 0 3px 0 $dark-magenta;
 
                     &#reset,
                     &#del,
@@ -162,13 +162,14 @@
 
                     &#reset,
                     &#del {
-                        background-color: $dark-moderate-cyan;
-                        box-shadow: 0 3px 0 $very-dark-cyan;
+                        background-color: $dark-violet;
+                        box-shadow: 0 3px 0 $vivid-magenta;
                     }
 
                     &#equal {
-                        background-color: $orange;
-                        box-shadow: 0 3px 0 $dark-orange;
+                        background-color: $pure-cyan;
+                        box-shadow: 0 3px 0 $soft-cyan;
+                        color: $very-dark-blue;
                     }
 
                 }
