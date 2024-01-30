@@ -1,7 +1,11 @@
 import { useState } from "react"
 
-const ThemeSelector = () => {
-  const [theme, setTheme] = useState(1)
+
+interface ThemeSelectorProps {
+  setTheme: (arg: number) => void;
+  theme: number;
+}
+const ThemeSelector = ({setTheme, theme}: ThemeSelectorProps) => {
 
   const toggleInputTheme = (id: string) => {
     id === 'theme-one' &&  setTheme(1)
@@ -12,7 +16,7 @@ const ThemeSelector = () => {
   const handleClick = () => {
     if(theme >= 3) return setTheme(1)
     const nextTheme = theme + 1
-    return setTheme(nextTheme)
+  return setTheme(nextTheme)
   }
 
   return (

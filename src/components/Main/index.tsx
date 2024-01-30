@@ -1,11 +1,13 @@
+import { useState } from "react"
 import Display from "../Display"
 import Keypad from "../Keypad"
 
 const Main = () => {
+  const [value, setValue] = useState('');
   return (
     <main className="main">
-      <Display value={'32025'} />
-      <Keypad />
+      <Display value={value} setValue={setValue}/>
+      <Keypad setValue={setValue}/>
     </main>
   )
 }

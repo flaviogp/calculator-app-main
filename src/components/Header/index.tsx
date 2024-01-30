@@ -1,10 +1,15 @@
 import ThemeSelector from '../ThemeSelector'
 
-const Header = () => {
+
+interface HeaderProps {
+  setTheme: (arg: number) => void;
+  theme: number;
+}
+const Header = ({setTheme, theme} : HeaderProps) => {
   return (
     <header className='header'>
         <h1>calc</h1>
-        <ThemeSelector />
+        <ThemeSelector setTheme={setTheme} theme={theme}/>
     </header>
   )
 }
