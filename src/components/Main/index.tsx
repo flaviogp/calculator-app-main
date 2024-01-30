@@ -7,7 +7,7 @@ const Main = () => {
   return (
     <main className="main">
       <Display value={value} setValue={setValue}/>
-      <Keypad setValue={setValue}/>
+      <Keypad value={value} setValue={setValue}/>
     </main>
   )
 }

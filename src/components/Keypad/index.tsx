@@ -1,13 +1,29 @@
 
 interface KeypadProps {
-  setvalue: (arg: string) => void
+  setValue: (arg: string) => void; 
+  value: string;
 }
 
-const Keypad = ({setvalue}:KeypadProps) => {
+const Keypad = ({setValue, value}:KeypadProps) => {
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    const value = e.currentTarget.innerText
-    setvalue(value)
+    let currentValue = e.currentTarget.innerText
+    currentValue === 'x' ? currentValue = '*' : currentValue;  
+    console.log(value, currentValue)
+    setValue(`${value}${currentValue}`)
+  }
+
+  const handleDelete = () => {
+    const newValue = value.slice(0, -1);
+    setValue(newValue)
+  }
+  const handleReset = () => {
+    setValue('')
+  }
+
+  const calc = () => {
+    const result = eval(value)
+    setValue(result)
   }
 
   return (
@@ -16,7 +32,7 @@ const Keypad = ({setvalue}:KeypadProps) => {
         <div id="7" onClick={(e) => handleClick(e)}>7</div>
         <div id="8" onClick={(e) => handleClick(e)}>8</div>
         <div id="9" onClick={(e) => handleClick(e)}>9</div>
-        <div id="del">del</div>
+        <div id="del" onClick={handleDelete}>del</div>
       </div>
       <div className="row">
         <div id="4" onClick={(e) => handleClick(e)}>4</div>
@@ -37,8 +53,8 @@ const Keypad = ({setvalue}:KeypadProps) => {
         <div id="multiplier" onClick={(e) => handleClick(e)}>x</div>
       </div>
       <div className="row buttons">
-      <div id="reset">reset</div>
-      <div id="equal">=</div>
+      <div id="reset" onClick={handleReset}>reset</div>
+      <div id="equal" onClick={calc}>=</div>
       </div>
     </div>
   )
